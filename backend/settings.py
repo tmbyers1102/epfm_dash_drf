@@ -140,4 +140,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # for React
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:5173',
+    'https://tmbyers3310.pythonanywhere.com/',
 )
