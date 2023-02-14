@@ -31,7 +31,7 @@ class TaskListCreateView(generics.ListCreateAPIView):
 
 	def get_task_data(self, request):
 		data = self.request.id
-		print('here is the data =====>> ')
+		print('here is the data')
 	
 	def perform_create(self, serializer):
 		# this is how you attach the current user to a created record
