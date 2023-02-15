@@ -61,7 +61,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'backend.urls'
-CORS_URLS_REGEX = r"^/api/.*"
+# CORS_URLS_REGEX = r"^/api/.*"
 
 TEMPLATES = [
     {
