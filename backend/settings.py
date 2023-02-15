@@ -61,7 +61,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'backend.urls'
-# CORS_URLS_REGEX = r"^/api/.*"
 
 TEMPLATES = [
     {
@@ -147,3 +146,7 @@ CORS_ORIGIN_WHITELIST = (
     'https://tmbyers1102.github.io',
     'https://tmbyers1102.github.io/epfm-dashboard',
 )
+
+
+# added in with cors
+# CORS_URLS_REGEX = r"^/api/.*"
