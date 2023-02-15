@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-%shn#32o513e5-6b_)ct@-)3)k6v&&-bq_)0dm)u+730nuw!-j
 # switched to true with deploy to python anywhere
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'tmbyers3310.pythonanywhere.com', 'tmbyers1102.github.io']
+# ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'tmbyers3310.pythonanywhere.com', 'tmbyers1102.github.io']
+ALLOWED_HOSTS = ['*']
+# CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
