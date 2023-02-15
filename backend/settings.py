@@ -145,4 +145,5 @@ CORS_ORIGIN_WHITELIST = (
     'https://tmbyers3310.pythonanywhere.com',
     # 'https://tmbyers1102.github.io/epfm-dashboard',
     'https://tmbyers1102.github.io',
+    'https://tmbyers1102.github.io/epfm-dashboard',
 )
