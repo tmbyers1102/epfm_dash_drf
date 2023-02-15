@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-%shn#32o513e5-6b_)ct@-)3)k6v&&-bq_)0dm)u+730nuw!-j
 # switched to true with deploy to python anywhere
 DEBUG = False
 
-ALLOWED_HOSTS = ['localhost', 'tmbyers3310.pythonanywhere.com']
+ALLOWED_HOSTS = ['localhost', 'tmbyers3310.pythonanywhere.com', 'tmbyers1102.github.io']
 
 
 # Application definition
@@ -140,10 +140,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # White listing the localhost:3000 port
 # for React
 CORS_ORIGIN_WHITELIST = (
+    'https://tmbyers1102.github.io',
     'http://localhost:5173',
     'https://tmbyers3310.pythonanywhere.com',
     # 'https://tmbyers1102.github.io/epfm-dashboard',
-    'https://tmbyers1102.github.io',
 )
 
 
