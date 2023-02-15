@@ -28,7 +28,7 @@ DEBUG = False
 
 # ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'tmbyers3310.pythonanywhere.com', 'tmbyers1102.github.io']
 ALLOWED_HOSTS = ['*']
-# CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_ALLOW_ALL = True
 
 
 # Application definition
