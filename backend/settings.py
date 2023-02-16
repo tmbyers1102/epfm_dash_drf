@@ -148,6 +148,27 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #     # 'https://tmbyers1102.github.io/epfm-dashboard',
 # )
 
+CORS_ALLOW_METHODS = [
+    "DELETE",
+    "GET",
+    "OPTIONS",
+    "PATCH",
+    "POST",
+    "PUT",
+]
+
+CORS_ALLOW_HEADERS = [
+    "accept",
+    "accept-encoding",
+    "authorization",
+    "content-type",
+    "dnt",
+    "origin",
+    "user-agent",
+    "x-csrftoken",
+    "x-requested-with",
+]
+
 
 # added in with cors
 # CORS_URLS_REGEX = r"^/api/.*"
