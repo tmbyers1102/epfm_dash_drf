@@ -51,9 +51,9 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -141,12 +141,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # White listing the localhost:3000 port
 # for React
-# CORS_ORIGIN_WHITELIST = (
-#     'https://tmbyers1102.github.io',
-#     'http://localhost:5173',
-#     'https://tmbyers3310.pythonanywhere.com',
-#     # 'https://tmbyers1102.github.io/epfm-dashboard',
-# )
+CORS_ORIGIN_WHITELIST = (
+    'https://tmbyers1102.github.io',
+    'http://localhost:5173',
+    'https://tmbyers3310.pythonanywhere.com',
+    # 'https://tmbyers1102.github.io/epfm-dashboard',
+)
 
 CORS_ALLOW_METHODS = [
     "DELETE",
