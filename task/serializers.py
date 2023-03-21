@@ -25,6 +25,9 @@ class TaskSerializer(serializers.ModelSerializer):
             'related_client',
             'related_client_name',
             'related_project_item',
+            'related_project_item_name',
+            'related_client_epfm',
+            # 'related_project',
             # 'related_updates',
         )
 

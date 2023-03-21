@@ -20,35 +20,27 @@ class UpdateView(viewsets.ModelViewSet):
 
 
 class UpdateListCreateView(generics.ListCreateAPIView):
-	queryset = Update.objects.filter(related_task="2").order_by('-update_date')
+	queryset = Update.objects.all()
 	serializer_class = UpdateSerializer
+	print('UpdateListCreateView')
 
-	# def get_task_updates(self, request):
-	# 	task = self.request.id
-	# 	print(task)
-	# 	updates = Update.objects.all()
-	# 	return JSONResponse({updates: updates})
+	def get_update_data(self, request):
+		data = self.request.id
+		print('here is the data')
 	
 	def perform_create(self, serializer):
-		# task = get_object_or_404(Task, pk=pk)
-		# task = self.request.data
-		# print('here is task ====>',task)
-		the_data = serializer.validated_data.get('title')
-		print('here is the title ====>',the_data)
-		today = now().date()
+		print('perform_create activated')
 		title = serializer.validated_data.get('title')
 		description = serializer.validated_data.get('description')
-		# update_type = serializer.validated_data.get('update_type')
-		# update_date = serializer.validated_data.get('update_date') or None
-		# if update_date is None:
-		# 	update_date = today
-		# related_task = Task.objects.get(id=2)
-		# related_client = related_task.related_client
+		update_date = serializer.validated_data.get('update_date')
+		update_type = serializer.validated_data.get('update_type')
+		related_task = serializer.validated_data.get('related_task')
+		related_client = serializer.validated_data.get('related_client')
 		serializer.save(
 			title=title,
 			description=description,
-			# update_type=update_type,
-			# update_date=update_date,
-			# related_task=related_task,
-			# related_client=related_client,
+			update_type=update_type,
+			update_date=update_date,
+			related_task=related_task,
+			related_client=related_client,
 			)

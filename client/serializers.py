@@ -31,7 +31,13 @@ class ClientSerializer(serializers.ModelSerializer):
 			'id',
 			'name',
 			'cfu_link', 
+			'epfm', 
+			'account_executive', 
 			'active',
+			'escalation',
+			'logo_link',
+			'next_recurring_sync',
+			'recurring_sync_description',
 			'my_client_contact_data',
 			)
 

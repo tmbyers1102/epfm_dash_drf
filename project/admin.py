@@ -19,7 +19,7 @@ admin.site.register(Project,ProjectAdmin)
 class ProjectItemAdmin(admin.ModelAdmin):
 
 	# add the fields of the model here
-	list_display = ("title","related_project","status")
+	list_display = ("title", "related_project","status")
 
 # we will need to register the
 # model class and the Admin model class

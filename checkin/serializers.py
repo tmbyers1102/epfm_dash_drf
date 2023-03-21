@@ -17,4 +17,7 @@ class CheckinSerializer(serializers.ModelSerializer):
             'next_check_date',
             'related_client',
             'related_client_name',
+	      'ticket_link',
+	      'related_client_epfm',
+	      'waiting_on',
         )

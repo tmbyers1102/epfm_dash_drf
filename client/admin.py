@@ -7,7 +7,7 @@ from .models import Client, ClientContact
 class ClientAdmin(admin.ModelAdmin):
 
 	# add the fields of the model here
-	list_display = ("name","cfu_link","active")
+	list_display = ("name","cfu_link","active","epfm","escalation")
 
 # we will need to register the
 # model class and the Admin model class

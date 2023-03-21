@@ -1,11 +1,18 @@
 from django.db import models
+from Feedo.models import Feedo
 
 
 class Client(models.Model):
     name=models.CharField(max_length=150)
     cfu_link=models.URLField()
     active=models.BooleanField(default=False)
-
+    epfm=models.ForeignKey(Feedo, null=True, blank=True, on_delete=models.SET_NULL, related_name='client_epfm')
+    account_executive=models.ForeignKey(Feedo, null=True, blank=True, on_delete=models.SET_NULL, related_name='client_ae')
+    escalation=models.BooleanField(default=False)
+    logo_link=models.URLField(null=True, blank=True)
+    next_recurring_sync=models.DateField(null=True, blank=True)
+    recurring_sync_description=models.CharField(max_length=150, null=True, blank=True)
+    
     def __str__(self):
         #it will return the name
         return self.name

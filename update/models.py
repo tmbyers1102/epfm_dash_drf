@@ -1,6 +1,7 @@
 from django.db import models
 from client.models import Client
 from task.models import Task
+from datetime import date
 
 
 class Update(models.Model):
@@ -24,7 +25,7 @@ class Update(models.Model):
     title=models.CharField(max_length=150)
     description=models.CharField(max_length=500, blank=True, null=True)
     update_type=models.CharField(max_length=50, choices=UpdateType.choices, default=UpdateType.OTHER)
-    update_date=models.DateField(blank=True)
+    update_date=models.DateField(auto_now_add=True)
     related_client=models.ForeignKey(Client, on_delete=models.CASCADE)
     related_task=models.ForeignKey(Task, blank=True, null=True, on_delete=models.CASCADE, related_name="task_update")
 

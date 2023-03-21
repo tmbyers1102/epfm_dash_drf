@@ -7,8 +7,8 @@ from .models import Task
 class TaskAdmin(admin.ModelAdmin):
 
 	# add the fields of the model here
-	list_display = ("title", "related_client_name", "status", "related_project_item")
-	list_editable = ('status', )
+	list_display = ("title", "related_client_name", "status", "related_project_item", "related_client_epfm")
+	list_editable = ('status', 'related_client_epfm')
 
 # we will need to register the
 # model class and the Admin model class

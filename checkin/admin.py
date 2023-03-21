@@ -7,7 +7,7 @@ from .models import Checkin
 class CheckinAdmin(admin.ModelAdmin):
 
 	# add the fields of the model here
-	list_display = ("title","completed", "related_client_name")
+	list_display = ("title","completed", "related_client_name", "related_client_epfm")
 
 # we will need to register the
 # model class and the Admin model class
